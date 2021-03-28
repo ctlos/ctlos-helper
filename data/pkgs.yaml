@@ -1,35 +1,94 @@
 kernel:
+  - name: "Linux"
+    descr: "Install arch kernel"
+    pkgs:
+      linux
+      linux-headers
   - name: "Linux-lts"
-    descr: "Install Kernel & Drivers"
+    descr: "Install lts kernel"
     pkgs:
       linux-lts
       linux-lts-headers
   - name: "Linux-zen"
-    descr: "Install linux-zen kernel"
+    descr: "Install zen kernel"
     pkgs:
       linux-zen
       linux-zen-headers
+  - name: "Linux-hardened"
+    descr: "Install hardened kernel"
+    pkgs:
+      linux-hardened
+      linux-hardened-headers
 
-de:
-  - name: "Desktop environment"
-    descr: "Install Desktop environment"
-    groups:
-    - name: "Xfce"
-      descr: "Desktop environment"
-      pkgs:
-        ctlos-xfce-skel
-    - name: "Openbox"
-      descr: "Window manager"
-      pkgs:
-        ctlos-openbox-skel
+drivers:
+  - name: "Drivers"
+    pkgs:
+      nvidia
+      nvidia-lts
+      nvidia-settings
+      nvidia-utils
+      lib32-nvidia-utils
+
+utils:
+  - name: "Utils"
+    pkgs:
+      os-prober
+      testdisk
+      inxi
+      neofetch
+      blueman
+      gotop-bin
+      cava
+      tmux
+      ranger
+      rofi
+      ncmpcpp
+      newsboat
+      youtube-dl
+      unclutter
+      nmap
+      fzf-extras
+      bash-completion
+      syntax-highlighting
+      oh-my-zsh-git
+      zsh-autosuggestions
+      zsh-fast-syntax-highlighting-git
 
 app:
-  - name: "Applications"
-    descr: "Install Applications"
-    groups:
-    - name: "Htop"
-      pkgs:
-        htop
-    - name: "Gotop"
-      pkgs:
-        gotop-bin
+  - name: "Recommend"
+    pkgs:
+      timeshift
+      pamac-aur
+      gparted
+      gufw
+      keepassxc
+      veracrypt
+      telegram-desktop
+      flameshot
+
+fonts:
+  - name: "Fonts"
+    pkgs:
+      ttf-font-awesome
+      ttf-dejavu
+      ttf-opensans
+      ttf-ubuntu-font-family
+      ttf-roboto
+      ttf-roboto-mono
+      ttf-clear-sans
+      nerd-fonts-hack
+      otb-uw_ttyp0
+      noto-fonts-cjk
+      noto-fonts-emoji
+
+## Groups list
+# app:
+#   - name: "Applications"
+#     descr: "Install Applications"
+#     groups:
+#     - name: "Htop"
+#       pkgs:
+#         htop
+#     - name: "Gotop"
+#       pkgs:
+#         gotop-bin

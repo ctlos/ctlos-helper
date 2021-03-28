@@ -15,7 +15,10 @@ export -f parse_yaml
 
 tabs=(
 "Kernel|.kernel[].pkgs"
-"App|.app[].groups[].pkgs"
+"Drivers|.drivers[].pkgs"
+"Utils|.utils[].pkgs"
+"Recommend|.app[].pkgs"
+"Fonts|.fonts[].pkgs"
 )
 
 tab=0
