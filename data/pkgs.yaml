@@ -1,0 +1,35 @@
+kernel:
+  - name: "Linux-lts"
+    descr: "Install Kernel & Drivers"
+    pkgs:
+      linux-lts
+      linux-lts-headers
+  - name: "Linux-zen"
+    descr: "Install linux-zen kernel"
+    pkgs:
+      linux-zen
+      linux-zen-headers
+
+de:
+  - name: "Desktop environment"
+    descr: "Install Desktop environment"
+    groups:
+    - name: "Xfce"
+      descr: "Desktop environment"
+      pkgs:
+        ctlos-xfce-skel
+    - name: "Openbox"
+      descr: "Window manager"
+      pkgs:
+        ctlos-openbox-skel
+
+app:
+  - name: "Applications"
+    descr: "Install Applications"
+    groups:
+    - name: "Htop"
+      pkgs:
+        htop
+    - name: "Gotop"
+      pkgs:
+        gotop-bin
