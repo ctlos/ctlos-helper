@@ -3,7 +3,7 @@
 stdbuf -oL -eL \
 yad --title="Conky Chooser" \
   --center --width=400 --height=250 \
-  --html --uri="/home/creio/ctlos-helper/helper.html" \
+  --html --uri="/etc/ctlos-helper/helper.html" \
   --button=Close:1 \
   --print-uri 2>&1 \
 | while read -r line; do

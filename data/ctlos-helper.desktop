@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Ctlos Helper
+Comment=Ctlos System Helper, install pkgs
+Exec=/usr/bin/ctlos-helper %f
+Icon=gtk3-widget-factory
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=System;

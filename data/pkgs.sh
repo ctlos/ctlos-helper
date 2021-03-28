@@ -4,7 +4,7 @@ results=$(mktemp --tmpdir pkgs.XXX)
 yadkey="${RANDOM}"
 
 parse_yaml() {
-  local yaml_file=/home/creio/ctlos-helper/pkgs.yaml
+  local yaml_file=/etc/ctlos-helper/pkgs.yaml
   local elem=$1
   # https://github.com/mikefarah/yq/releases/v4.6.0
   # yay yq2-bin
