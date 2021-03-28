@@ -2,13 +2,13 @@
 
 pkgname=ctlos-helper
 pkgdesc='Ctlos System Helper'
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/ctlos-helper"
 license=('GPL')
 makedepends=('git')
-depends=('yad')
+depends=('yad' 'yq2-bin')
 source=("git+$url.git")
 sha256sums=('SKIP')
 install=README.install
