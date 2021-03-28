@@ -1,0 +1,29 @@
+# Maintainer: Alex Creio <ctlos@protonmail.com>
+
+pkgname=ctlos-helper
+pkgdesc='Ctlos System Helper'
+pkgver=1.0.0
+pkgrel=1
+arch=('any')
+url="https://github.com/ctlos/ctlos-helper"
+license=('GPL')
+makedepends=('git')
+depends=('yad')
+source=("git+$url.git")
+sha256sums=('SKIP')
+install=README.install
+
+package() {
+  cd ${srcdir}/${pkgname}
+  install -Dm755 ./data/ctlos-helper.sh $pkgdir/usr/bin/ctlos-helper.sh
+  install -Dm644 ./data/ru.ctlos.ctlos-helper.policy $pkgdir/usr/share/polkit-1/actions/ru.ctlos.ctlos-helper.policy
+  install -Dm644 ./data/ctlos-helper.desktop $pkgdir/usr/share/applications/ctlos-helper.desktop
+
+  # install -d $pkgdir/etc/ctlos-helper
+
+  install -Dm755 ./data/ctlos-helper $pkgdir/etc/ctlos-helper/ctlos-helper
+  install -Dm755 ./data/pkgs.sh $pkgdir/etc/ctlos-helper/pkgs.sh
+  install -Dm644 ./data/pkgs.yaml $pkgdir/etc/ctlos-helper/pkgs.yaml
+
+  # cp -r settings-{on,off}line.conf $pkgdir/usr/share/
+}
