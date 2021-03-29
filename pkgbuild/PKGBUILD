@@ -2,7 +2,7 @@
 
 pkgname=ctlos-helper
 pkgdesc='Ctlos System Helper'
-pkgver=1.0.4
+pkgver=1.0.5
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/ctlos-helper"
