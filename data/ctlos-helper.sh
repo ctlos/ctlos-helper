@@ -87,4 +87,4 @@ yad \
 --form --columns=1 \
 --field="Pacman menu":fbtn "bash -c yad_pacman" \
 --field="Установить доп. пакеты":fbtn "bash -c /etc/ctlos-helper/pkgs.sh" \
---field="Ctlos Linux Wiki":fbtn "sudo -u $user xdg-open https://ctlos.github.io"
+--field="Go в Telegram Chat":fbtn "sudo -u $user xdg-open https://telegram.me/ctlos"

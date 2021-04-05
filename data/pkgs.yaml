@@ -65,6 +65,7 @@ app:
       veracrypt
       telegram-desktop
       flameshot
+      ventoy-bin
 
 fonts:
   - name: "Fonts"
