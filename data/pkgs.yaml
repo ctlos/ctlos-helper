@@ -71,6 +71,7 @@ app:
       veracrypt
       telegram-desktop
       flameshot
+      torrserver-bin
       ventoy-bin
       azpainter
       qmplay2
