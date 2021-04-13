@@ -51,7 +51,7 @@ yad_pacman() {
   yad_opts=(
   --title="Pacman actions" --text="<span font='12'>Выберите действие</span>\n"
   --center --width=350 --borders=15 --form --columns=2
-  --window-icon="gtk-execute" --image="dialog-question" --image-on-top
+  --window-icon="applications-utilities" --image="dialog-question" --image-on-top
   --buttons-layout=center
   )
 
@@ -71,7 +71,7 @@ yad_pacman() {
       $cmd
     fi
   done | while read -r line; do echo "# ${line}"; done | yad --title="Progress" --width=650 --height=450 \
-      --window-icon="gtk-execute" --progress --pulsate --auto-kill --auto-close --center \
+      --window-icon="applications-utilities" --progress --pulsate --auto-kill --auto-close --center \
       --enable-log "Progress..." --log-expanded --log-height=300 --log-on-top --percentage=1
 }
 
@@ -82,7 +82,7 @@ yad \
 --center --width=450 --borders=15 \
 --text-info --text-align=center \
 --text="<span font='12'>Ctlos Linux Helper</span>\n" \
---window-icon="gtk-execute" \
+--window-icon="applications-utilities" \
 --buttons-layout=center --button="Close":1 \
 --form --columns=1 \
 --field="Pacman menu":fbtn "bash -c yad_pacman" \

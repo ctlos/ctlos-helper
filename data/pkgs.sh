@@ -46,13 +46,13 @@ tabs_name() {
 yad --center --width=550 --height=500 --notebook \
   --key=${yadkey} $(echo $(tabs_name)) --title="Pkgs list" \
   --text="<span font='12'>Выберите пакеты для установки</span>\n" \
-  --window-icon="gtk-execute" --image="dialog-question" --button="Close":1 --button="Ok":2
+  --window-icon="applications-utilities" --image="dialog-question" --button="Close":1 --button="Ok":2
 
 install_pkgs() {
   res=$(cat $results)
   pacman -Syy --noconfirm --needed $res 2>&1 | \
   while read -r line; do echo "# ${line}"; done | yad --title="Progress" --width=650 --height=450 \
-    --window-icon="gtk-execute" --progress --pulsate --auto-kill --auto-close --center \
+    --window-icon="applications-utilities" --progress --pulsate --auto-kill --auto-close --center \
     --enable-log "Progress..." --log-expanded --log-height=300 --log-on-top --percentage=1
 }
 
