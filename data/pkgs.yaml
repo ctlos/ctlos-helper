@@ -23,17 +23,20 @@ kernel:
 drivers:
   - name: "Drivers"
     pkgs:
-      nvidia
       nvidia-lts
+      nvidia-dkms
+      nvidia
       nvidia-settings
       nvidia-utils
       lib32-nvidia-utils
       nvidia-390xx-dkms
       nvidia-390xx-settings
       nvidia-390xx-utils
+      lib32-nvidia-390xx-utils
       nvidia-340xx-dkms
       nvidia-340xx-settings
       nvidia-340xx-utils
+      lib32-nvidia-340xx-utils
 
 utils:
   - name: "Utils"
